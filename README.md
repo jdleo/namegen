@@ -17,6 +17,15 @@ allNames = namegen().names()
 males = namegen().names('m')
 #females
 females = namegen().names('f')
+```  
+###.random() method  
+This method returns random names. Here is how you use it:  
+```python
+from namegen import namegen
+#default param is from ALL names and count=1
+a = namegen().random() #will be one random name
+b = namegen().random('f') #will be one random female name
+c = namegen().random('m', count=1000) #will be 1000 random male names
 ```
 
 
