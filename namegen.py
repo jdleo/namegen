@@ -53,3 +53,15 @@ class namegen:
     			usernames.append(username)
     	return usernames
 
+    def logins(self, count=1, pwlength=8):
+    	user_pass = {}
+    	data = self.namelist
+    	chars = 'abcdefghijklmnopqrstuvwxyz01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    	for _ in range(0,count):
+    		pw = []
+    		for __ in range(0,pwlength):
+    			pw.append(chars[random.randint(0,len(chars)-1)])
+    		digits = random.randint(0,999)
+    		username = '{}{}'.format(data[random.randint(0,len(data)-1)], digits)
+    		user_pass[username] = ''.join(pw)
+    	return user_pass
