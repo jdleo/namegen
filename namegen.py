@@ -30,3 +30,26 @@ class namegen:
     		for _ in range(0,count):
     			names.append(data[random.randint(0,len(data)-1)])
     	return names
+
+    def randomUsername(self, mf='a', count=1):
+    	usernames = []
+    	if mf == 'a':
+    		data = self.namelist
+    		for _ in range(0,count):
+    			digits = random.randint(0,999)
+    			username =  '{}{}'.format(data[random.randint(0,len(data)-1)],digits)
+    			usernames.append(username)
+    	elif mf == 'm':
+    		data = self.namelistmale
+    		for _ in range(0,count):
+    			digits = random.randint(0,999)
+    			username = '{}{}'.format(data[random.randint(0,len(data)-1)],digits)
+    			usernames.append(username)
+    	elif mf == 'f':
+    		data = self.namelistfemale
+    		for _ in range(0,count):
+    			digits = random.randint(0,999)
+    			username = '{}{}'.format(data[random.randint(0,len(data)-1)],digits)
+    			usernames.append(username)
+    	return usernames
+
