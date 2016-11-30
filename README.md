@@ -36,6 +36,15 @@ b = namegen().randomUsername('f') #returns one random female username
 c = namegen().randomUsername(count=10) #returns 10 random usernames
 print(c)
 #output for the print: ['Kerianne230', 'Kristian457', 'Darth518', 'Sauncho668', 'Antone170', 'Terri542', 'Robyn839', 'Graeme25', 'Elizabeth380', 'Ninetta409']
+```  
+###.logins() method  
+This method generates user:pass combos in dictionary form. Here is how you use it:
+```python
+#default params are count=1 and pwlength=8
+a = namegen().logins() #this will give you one user:pass combo with pw length of 8
+b = namegen().logins(count=10, pwlength=7) 
+print(b)
+#output: {'Bartlett425': 'VLteN9G', 'Antoine595': 'LLbcLuq', 'Layne563': '0vl6zir', 'Amory491': 'PLKhDKI', 'Winnie792': 'Yrz4miC', 'Brynna810': 'hUm8koY', 'Robbyn916': 'GyJOGLN', 'Samuel817': '63sOTY0', 'Dorry846': 'q2EwueV', 'Ada942': 'rWfurXH'}
 ```
 
 
